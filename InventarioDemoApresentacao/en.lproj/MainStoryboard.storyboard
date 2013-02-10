@@ -89,6 +89,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="criarLote:" destination="MxI-ya-h8Q" eventType="touchUpInside" id="I95-lu-JFe"/>
+                                </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Nome Lote:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TJ8-db-Xvo">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -125,23 +128,16 @@
                             <constraint firstItem="SuG-vp-wYY" firstAttribute="leading" secondItem="rjm-f0-nzi" secondAttribute="leading" type="default" id="z3A-fF-gsJ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="nomeLote" destination="37Q-51-AVY" id="vFT-vO-tTd"/>
+                        <outlet property="tabelaProdutos" destination="UJs-Qz-Tfn" id="lmV-q0-4ao"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vZr-vT-9Cf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-50" y="-14"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="CriarLoteViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CriarLoteViewController.h"/>
-        </class>
-        <class className="InicialController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/InicialController.h"/>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

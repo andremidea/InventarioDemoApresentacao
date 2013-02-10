@@ -7,12 +7,14 @@
 //
 
 #import "CriarLoteViewController.h"
+#import "Produto.h"
 
 @interface CriarLoteViewController ()
 
 @end
 
 @implementation CriarLoteViewController
+@synthesize produtos,lotes;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,6 +29,24 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    [self carregarProdutos];
+}
+
+-(void)carregarProdutos{
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"produtos" ofType:@"plist"];
+    NSDictionary *pl = [NSDictionary dictionaryWithContentsOfFile:path];
+    NSArray *dados = [pl objectForKey:@"produtos"];
+    
+    produtos = [[NSMutableArray alloc]init];
+    for(NSDictionary *item in dados){
+        
+        NSString *nome = [item objectForKey:@"nome"];
+        
+        Produto *p = [[Produto alloc]initWithNome:nome eQuantidade:0];
+        [produtos addObject:p];
+        
+        [p release];
+    };
 }
 
 - (void)didReceiveMemoryWarning
@@ -35,4 +55,11 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)dealloc {
+    [_tabelaProdutos release];
+    [_nomeLote release];
+    [super dealloc];
+}
+- (IBAction)criarLote:(id)sender {
+}
 @end

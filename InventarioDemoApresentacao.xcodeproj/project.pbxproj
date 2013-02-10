@@ -20,6 +20,8 @@
 		63DEB40216C80DCF00E9B18E /* InicialController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63DEB40116C80DCF00E9B18E /* InicialController.m */; };
 		63DEB40416C8119B00E9B18E /* produtos.plist in Resources */ = {isa = PBXBuildFile; fileRef = 63DEB40316C8119B00E9B18E /* produtos.plist */; };
 		63DEB40716C811AD00E9B18E /* CriarLoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63DEB40616C811AD00E9B18E /* CriarLoteViewController.m */; };
+		63DEB40A16C8138E00E9B18E /* Produto.m in Sources */ = {isa = PBXBuildFile; fileRef = 63DEB40916C8138E00E9B18E /* Produto.m */; };
+		63DEB40D16C815B500E9B18E /* Lote.m in Sources */ = {isa = PBXBuildFile; fileRef = 63DEB40C16C815B500E9B18E /* Lote.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,10 @@
 		63DEB40316C8119B00E9B18E /* produtos.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = produtos.plist; sourceTree = "<group>"; };
 		63DEB40516C811AD00E9B18E /* CriarLoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CriarLoteViewController.h; sourceTree = "<group>"; };
 		63DEB40616C811AD00E9B18E /* CriarLoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CriarLoteViewController.m; sourceTree = "<group>"; };
+		63DEB40816C8138E00E9B18E /* Produto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Produto.h; sourceTree = "<group>"; };
+		63DEB40916C8138E00E9B18E /* Produto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Produto.m; sourceTree = "<group>"; };
+		63DEB40B16C815B500E9B18E /* Lote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Lote.h; sourceTree = "<group>"; };
+		63DEB40C16C815B500E9B18E /* Lote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Lote.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +100,10 @@
 				63DEB3F516C807AB00E9B18E /* MainStoryboard.storyboard */,
 				63DEB40516C811AD00E9B18E /* CriarLoteViewController.h */,
 				63DEB40616C811AD00E9B18E /* CriarLoteViewController.m */,
+				63DEB40816C8138E00E9B18E /* Produto.h */,
+				63DEB40916C8138E00E9B18E /* Produto.m */,
+				63DEB40B16C815B500E9B18E /* Lote.h */,
+				63DEB40C16C815B500E9B18E /* Lote.m */,
 				63DEB40016C80DCF00E9B18E /* InicialController.h */,
 				63DEB40116C80DCF00E9B18E /* InicialController.m */,
 				63DEB3E416C807AA00E9B18E /* Supporting Files */,
@@ -186,6 +196,8 @@
 				63DEB3EE16C807AA00E9B18E /* AppDelegate.m in Sources */,
 				63DEB40216C80DCF00E9B18E /* InicialController.m in Sources */,
 				63DEB40716C811AD00E9B18E /* CriarLoteViewController.m in Sources */,
+				63DEB40A16C8138E00E9B18E /* Produto.m in Sources */,
+				63DEB40D16C815B500E9B18E /* Lote.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
