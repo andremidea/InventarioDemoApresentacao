@@ -49,6 +49,25 @@
     };
 }
 
+-(NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return produtos.count;
+}
+
+-(UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+   static NSString *cellCache = @"CelulaDoProduto";
+   UITableViewCell *celula = [self.tabelaProdutos dequeueReusableCellWithIdentifier:cellCache];
+    
+    if(!celula){
+        celula = [[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellCache]autorelease];
+    }
+    
+    celula.textLabel.text = [[produtos objectAtIndex:indexPath.row] nome];
+    
+    return celula;
+}
+
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
