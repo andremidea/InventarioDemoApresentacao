@@ -67,6 +67,18 @@
     return celula;
 }
 
+-(BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [self.nomeLote resignFirstResponder];
+    
+    return YES;
+}
+
+-(void)mostraMensagem:(NSString *)mensagem{
+    UIAlertView *alerta = [[[UIAlertView alloc]initWithTitle:@"Cadastrado" message:mensagem delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil]autorelease];
+    
+    [alerta show];
+}
+
 
 - (void)didReceiveMemoryWarning
 {
