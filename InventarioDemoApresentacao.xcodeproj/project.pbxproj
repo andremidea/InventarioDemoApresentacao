@@ -18,6 +18,8 @@
 		63DEB3F416C807AB00E9B18E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 63DEB3F316C807AA00E9B18E /* Default-568h@2x.png */; };
 		63DEB3F716C807AB00E9B18E /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63DEB3F516C807AB00E9B18E /* MainStoryboard.storyboard */; };
 		63DEB40216C80DCF00E9B18E /* InicialController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63DEB40116C80DCF00E9B18E /* InicialController.m */; };
+		63DEB40416C8119B00E9B18E /* produtos.plist in Resources */ = {isa = PBXBuildFile; fileRef = 63DEB40316C8119B00E9B18E /* produtos.plist */; };
+		63DEB40716C811AD00E9B18E /* CriarLoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63DEB40616C811AD00E9B18E /* CriarLoteViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,9 @@
 		63DEB3F616C807AB00E9B18E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		63DEB40016C80DCF00E9B18E /* InicialController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InicialController.h; sourceTree = "<group>"; };
 		63DEB40116C80DCF00E9B18E /* InicialController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InicialController.m; sourceTree = "<group>"; };
+		63DEB40316C8119B00E9B18E /* produtos.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = produtos.plist; sourceTree = "<group>"; };
+		63DEB40516C811AD00E9B18E /* CriarLoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CriarLoteViewController.h; sourceTree = "<group>"; };
+		63DEB40616C811AD00E9B18E /* CriarLoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CriarLoteViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,9 +88,12 @@
 		63DEB3E316C807AA00E9B18E /* InventarioDemoApresentacao */ = {
 			isa = PBXGroup;
 			children = (
+				63DEB40316C8119B00E9B18E /* produtos.plist */,
 				63DEB3EC16C807AA00E9B18E /* AppDelegate.h */,
 				63DEB3ED16C807AA00E9B18E /* AppDelegate.m */,
 				63DEB3F516C807AB00E9B18E /* MainStoryboard.storyboard */,
+				63DEB40516C811AD00E9B18E /* CriarLoteViewController.h */,
+				63DEB40616C811AD00E9B18E /* CriarLoteViewController.m */,
 				63DEB40016C80DCF00E9B18E /* InicialController.h */,
 				63DEB40116C80DCF00E9B18E /* InicialController.m */,
 				63DEB3E416C807AA00E9B18E /* Supporting Files */,
@@ -163,6 +171,7 @@
 				63DEB3F216C807AA00E9B18E /* Default@2x.png in Resources */,
 				63DEB3F416C807AB00E9B18E /* Default-568h@2x.png in Resources */,
 				63DEB3F716C807AB00E9B18E /* MainStoryboard.storyboard in Resources */,
+				63DEB40416C8119B00E9B18E /* produtos.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,6 +185,7 @@
 				63DEB3EA16C807AA00E9B18E /* main.m in Sources */,
 				63DEB3EE16C807AA00E9B18E /* AppDelegate.m in Sources */,
 				63DEB40216C80DCF00E9B18E /* InicialController.m in Sources */,
+				63DEB40716C811AD00E9B18E /* CriarLoteViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,6 +306,7 @@
 				63DEB3FF16C807AB00E9B18E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
