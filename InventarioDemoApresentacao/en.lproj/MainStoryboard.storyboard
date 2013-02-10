@@ -42,6 +42,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="St6-Ey-I26" kind="modal" id="4Lk-aV-xJ7"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.72037522809999999" alpha="1" colorSpace="calibratedWhite"/>
@@ -142,7 +145,164 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vZr-vT-9Cf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-50" y="-14"/>
+            <point key="canvasLocation" x="-128" y="-185"/>
+        </scene>
+        <!--Selecao View Controller-->
+        <scene sceneID="NAb-Wh-xfk">
+            <objects>
+                <viewController id="St6-Ey-I26" customClass="SelecaoViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QYu-Cv-bmy">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TVx-WE-Kew">
+                                <items>
+                                    <navigationItem title="Seleção de Lote" id="cFZ-0s-o7f">
+                                        <barButtonItem key="leftBarButtonItem" title="Voltar" id="nAu-rN-SZx">
+                                            <connections>
+                                                <segue destination="owr-10-Afb" kind="modal" id="Ner-Yh-Otp"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Lotes" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1vm-PN-Ah9">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="KTn-sQ-xHR">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="325" id="5VB-LB-oc0"/>
+                                    <constraint firstAttribute="height" constant="411" id="QZG-GP-pPV"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="St6-Ey-I26" id="uDh-pA-jeZ"/>
+                                    <outlet property="delegate" destination="St6-Ey-I26" id="sOq-Rx-9aW"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.72037522809999999" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="KTn-sQ-xHR" firstAttribute="bottom" secondItem="QYu-Cv-bmy" secondAttribute="bottom" type="default" id="98m-Sa-Yao"/>
+                            <constraint firstItem="1vm-PN-Ah9" firstAttribute="top" secondItem="QYu-Cv-bmy" secondAttribute="top" constant="98" id="PFC-8Q-fie"/>
+                            <constraint firstItem="KTn-sQ-xHR" firstAttribute="leading" secondItem="QYu-Cv-bmy" secondAttribute="leading" type="default" id="S22-jx-kFQ"/>
+                            <constraint firstItem="TVx-WE-Kew" firstAttribute="trailing" secondItem="QYu-Cv-bmy" secondAttribute="trailing" type="default" id="bFj-dv-WhL"/>
+                            <constraint firstItem="1vm-PN-Ah9" firstAttribute="centerX" secondItem="TVx-WE-Kew" secondAttribute="centerX" type="default" id="pIu-fz-nsI"/>
+                            <constraint firstItem="TVx-WE-Kew" firstAttribute="leading" secondItem="QYu-Cv-bmy" secondAttribute="leading" type="default" id="wwd-7I-aDA"/>
+                            <constraint firstItem="TVx-WE-Kew" firstAttribute="top" secondItem="QYu-Cv-bmy" secondAttribute="top" type="default" id="zOx-Hh-06T"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tabelaLotes" destination="KTn-sQ-xHR" id="cIS-N1-DvX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qv4-Kn-oJm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-228" y="581"/>
+        </scene>
+        <!--Inventariar View Controller-->
+        <scene sceneID="Tty-oQ-jQ2">
+            <objects>
+                <viewController storyboardIdentifier="Inventariar" id="O2O-8a-aHv" customClass="InventariarViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3mb-o9-Wcg">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WaW-Hd-PIL">
+                                <items>
+                                    <navigationItem title="Inventariar" id="nNP-74-S2L">
+                                        <barButtonItem key="leftBarButtonItem" title="Voltar" id="HXk-cS-Crz">
+                                            <connections>
+                                                <segue destination="St6-Ey-I26" kind="modal" id="AB3-Sc-nsP"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Pronto" id="mux-0V-fsF"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Nome Lote:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BsJ-RH-40h">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="0nc-Dd-sgi">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="399" id="AVo-Ax-9el"/>
+                                    <constraint firstAttribute="width" constant="335" id="aB3-jf-xqJ"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="O2O-8a-aHv" id="Yyd-yO-4vk"/>
+                                    <outlet property="delegate" destination="O2O-8a-aHv" id="xTV-Me-UcP"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.72037522809999999" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="WaW-Hd-PIL" firstAttribute="trailing" secondItem="3mb-o9-Wcg" secondAttribute="trailing" type="default" id="3z3-OW-Fws"/>
+                            <constraint firstItem="0nc-Dd-sgi" firstAttribute="leading" secondItem="3mb-o9-Wcg" secondAttribute="leading" constant="-6" id="9AL-ci-zxy"/>
+                            <constraint firstItem="WaW-Hd-PIL" firstAttribute="top" secondItem="3mb-o9-Wcg" secondAttribute="top" type="default" id="KMg-nP-sGX"/>
+                            <constraint firstItem="0nc-Dd-sgi" firstAttribute="bottom" secondItem="3mb-o9-Wcg" secondAttribute="bottom" type="default" id="OLU-me-6by"/>
+                            <constraint firstItem="BsJ-RH-40h" firstAttribute="top" secondItem="3mb-o9-Wcg" secondAttribute="top" constant="94" id="cOO-Rr-iVn"/>
+                            <constraint firstItem="WaW-Hd-PIL" firstAttribute="leading" secondItem="3mb-o9-Wcg" secondAttribute="leading" type="default" id="nMc-f7-iDM"/>
+                            <constraint firstItem="BsJ-RH-40h" firstAttribute="centerX" secondItem="WaW-Hd-PIL" secondAttribute="centerX" type="default" id="xpr-UA-htq"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tabelaQtdeProd" destination="0nc-Dd-sgi" id="tsd-xV-dHz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qtw-Zt-bzd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="208" y="587"/>
+        </scene>
+        <!--Resultado View Controller-->
+        <scene sceneID="9Q1-lv-pHD">
+            <objects>
+                <viewController storyboardIdentifier="Resultado" id="SKg-Ez-A4T" customClass="ResultadoViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="af3-eC-7jP">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Qna-ka-xHr">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="SKg-Ez-A4T" id="UG5-co-8G8"/>
+                                    <outlet property="delegate" destination="SKg-Ez-A4T" id="Xsw-AF-iwY"/>
+                                </connections>
+                            </tableView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h56-u6-HiJ">
+                                <items>
+                                    <navigationItem title="Resultado" id="9oo-e4-mjE">
+                                        <barButtonItem key="leftBarButtonItem" title="Voltar" id="oR1-ds-KUh">
+                                            <connections>
+                                                <segue destination="St6-Ey-I26" kind="modal" id="lqM-UM-JJl"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="0.72037522809999999" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="h56-u6-HiJ" firstAttribute="leading" secondItem="af3-eC-7jP" secondAttribute="leading" type="default" id="QJa-2z-sP3"/>
+                            <constraint firstItem="Qna-ka-xHr" firstAttribute="trailing" secondItem="af3-eC-7jP" secondAttribute="trailing" type="default" id="T2T-YR-ReD"/>
+                            <constraint firstItem="Qna-ka-xHr" firstAttribute="bottom" secondItem="af3-eC-7jP" secondAttribute="bottom" type="default" id="Yyk-1Z-Pph"/>
+                            <constraint firstItem="Qna-ka-xHr" firstAttribute="leading" secondItem="af3-eC-7jP" secondAttribute="leading" type="default" id="g0w-aL-WI3"/>
+                            <constraint firstItem="Qna-ka-xHr" firstAttribute="top" secondItem="h56-u6-HiJ" secondAttribute="bottom" type="default" id="lg8-OW-F9O"/>
+                            <constraint firstItem="h56-u6-HiJ" firstAttribute="trailing" secondItem="af3-eC-7jP" secondAttribute="trailing" type="default" id="njO-CZ-tb9"/>
+                            <constraint firstItem="h56-u6-HiJ" firstAttribute="top" secondItem="af3-eC-7jP" secondAttribute="top" type="default" id="uOb-DH-wN7"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tabelaResultado" destination="Qna-ka-xHr" id="cFj-0k-9if"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9PE-zI-y9R" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="630" y="587"/>
         </scene>
     </scenes>
     <classes>
@@ -157,8 +317,23 @@
         <class className="InicialController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/InicialController.h"/>
         </class>
+        <class className="InventariarViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/InventariarViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="tabelaQtdeProd" candidateClass="UITableView"/>
+            </relationships>
+        </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="ResultadoViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ResultadoViewController.h"/>
+        </class>
+        <class className="SelecaoViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SelecaoViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="tabelaLotes" candidateClass="UITableView"/>
+            </relationships>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -166,4 +341,8 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="lqM-UM-JJl"/>
+        <segue reference="Ner-Yh-Otp"/>
+    </inferredMetricsTieBreakers>
 </document>

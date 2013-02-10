@@ -22,6 +22,9 @@
 		63DEB40716C811AD00E9B18E /* CriarLoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63DEB40616C811AD00E9B18E /* CriarLoteViewController.m */; };
 		63DEB40A16C8138E00E9B18E /* Produto.m in Sources */ = {isa = PBXBuildFile; fileRef = 63DEB40916C8138E00E9B18E /* Produto.m */; };
 		63DEB40D16C815B500E9B18E /* Lote.m in Sources */ = {isa = PBXBuildFile; fileRef = 63DEB40C16C815B500E9B18E /* Lote.m */; };
+		63DEB41016C824D800E9B18E /* SelecaoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63DEB40F16C824D800E9B18E /* SelecaoViewController.m */; };
+		63DEB41316C824E200E9B18E /* InventariarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63DEB41216C824E200E9B18E /* InventariarViewController.m */; };
+		63DEB41616C824E800E9B18E /* ResultadoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63DEB41516C824E800E9B18E /* ResultadoViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +51,12 @@
 		63DEB40916C8138E00E9B18E /* Produto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Produto.m; sourceTree = "<group>"; };
 		63DEB40B16C815B500E9B18E /* Lote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Lote.h; sourceTree = "<group>"; };
 		63DEB40C16C815B500E9B18E /* Lote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Lote.m; sourceTree = "<group>"; };
+		63DEB40E16C824D800E9B18E /* SelecaoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelecaoViewController.h; sourceTree = "<group>"; };
+		63DEB40F16C824D800E9B18E /* SelecaoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelecaoViewController.m; sourceTree = "<group>"; };
+		63DEB41116C824E200E9B18E /* InventariarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InventariarViewController.h; sourceTree = "<group>"; };
+		63DEB41216C824E200E9B18E /* InventariarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InventariarViewController.m; sourceTree = "<group>"; };
+		63DEB41416C824E800E9B18E /* ResultadoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultadoViewController.h; sourceTree = "<group>"; };
+		63DEB41516C824E800E9B18E /* ResultadoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultadoViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +110,12 @@
 				63DEB40516C811AD00E9B18E /* CriarLoteViewController.h */,
 				63DEB40616C811AD00E9B18E /* CriarLoteViewController.m */,
 				63DEB40816C8138E00E9B18E /* Produto.h */,
+				63DEB41116C824E200E9B18E /* InventariarViewController.h */,
+				63DEB41216C824E200E9B18E /* InventariarViewController.m */,
+				63DEB41416C824E800E9B18E /* ResultadoViewController.h */,
+				63DEB41516C824E800E9B18E /* ResultadoViewController.m */,
+				63DEB40E16C824D800E9B18E /* SelecaoViewController.h */,
+				63DEB40F16C824D800E9B18E /* SelecaoViewController.m */,
 				63DEB40916C8138E00E9B18E /* Produto.m */,
 				63DEB40B16C815B500E9B18E /* Lote.h */,
 				63DEB40C16C815B500E9B18E /* Lote.m */,
@@ -198,6 +213,9 @@
 				63DEB40716C811AD00E9B18E /* CriarLoteViewController.m in Sources */,
 				63DEB40A16C8138E00E9B18E /* Produto.m in Sources */,
 				63DEB40D16C815B500E9B18E /* Lote.m in Sources */,
+				63DEB41016C824D800E9B18E /* SelecaoViewController.m in Sources */,
+				63DEB41316C824E200E9B18E /* InventariarViewController.m in Sources */,
+				63DEB41616C824E800E9B18E /* ResultadoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
