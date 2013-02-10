@@ -8,6 +8,9 @@
 
 #import "CriarLoteViewController.h"
 #import "Produto.h"
+#import "Lote.h"
+#define DOCUMENTS_PATH [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0]
+
 
 @interface CriarLoteViewController ()
 
@@ -67,6 +70,16 @@
     return celula;
 }
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    UITableViewCell *celula = [tableView cellForRowAtIndexPath:indexPath];
+    
+    if(celula.accessoryType == UITableViewCellAccessoryCheckmark){
+        celula.accessoryType = UITableViewCellAccessoryNone;
+    }else{
+        celula.accessoryType = UITableViewCellAccessoryCheckmark;
+    }
+}
+
 -(BOOL)textFieldShouldReturn:(UITextField *)textField{
     [self.nomeLote resignFirstResponder];
     
@@ -92,5 +105,56 @@
     [super dealloc];
 }
 - (IBAction)criarLote:(id)sender {
+    
+    if(!lotes){
+        lotes = [[NSMutableArray alloc]init];
+    }
+    
+    Lote *lote = [[Lote alloc]initWithNumero:_nomeLote.text];
+    
+    for(UITableViewCell *cell in self.tabelaProdutos.visibleCells){
+        if(cell.accessoryType == UITableViewCellAccessoryCheckmark){
+            NSIndexPath *indexPath = [(UITableView *)cell.superview indexPathForCell: cell];
+            Produto *produto = [produtos objectAtIndex:indexPath.row];
+            [lote addProduto:produto];
+        }
+    }
+    
+    [lotes addObject:lote];
+    NSString *mensagem = [NSString stringWithFormat:@"Lote: %@ criado com sucesso", lote.numero];
+    [self mostraMensagem:mensagem];
+    
+    _nomeLote.text = nil;
+    [self.tabelaProdutos reloadData];
+    [self salvarLoteEmArquivo];
 }
+
+
+-(void)salvarLoteEmArquivo{
+    NSMutableArray  *lotesEmDictionary = [[NSMutableArray alloc]init];
+    
+    for(Lote *l in lotes){
+        NSMutableDictionary *lote = [[NSMutableDictionary alloc]initWithObjectsAndKeys:
+                                     l.numero,@"numero", nil];
+        
+        NSMutableArray *produtosDic = [[NSMutableArray alloc]init];
+        
+        for(Produto *p in l.produtos){
+            NSDictionary *produtoDic = [[NSDictionary alloc]initWithObjectsAndKeys:
+                                        p.nome,@"nome", nil];
+            [produtosDic addObject:produtoDic];
+        }
+        
+        [lote setObject:produtosDic forKey:@"produtos"];
+        
+        [lotesEmDictionary addObject:lote];
+    }
+    
+    
+    // note that myDictionary must only contain values of string,
+    // int, bool, array (once again containing only the same types),
+    // and other primitive types (I believe NSDates are valid too).
+    [lotesEmDictionary writeToFile:[DOCUMENTS_PATH stringByAppendingPathComponent:@"myDict.plist"] atomically:YES];
+}
+
 @end
