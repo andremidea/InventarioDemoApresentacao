@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Lote.h"
 
 @interface ResultadoViewController : UIViewController
-@property (retain, nonatomic) IBOutlet UITableView *tabelaResultado;
+@property (retain, nonatomic) Lote *lote;
 
 @end

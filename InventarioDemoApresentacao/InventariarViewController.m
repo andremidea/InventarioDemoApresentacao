@@ -8,6 +8,7 @@
 
 #import "InventariarViewController.h"
 #import <QuartzCore/QuartzCore.h>
+#import "ResultadoViewController.h"
 
 @interface InventariarViewController ()
 
@@ -28,6 +29,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.nomeDolOte.text = lote.numero;
 	// Do any additional setup after loading the view.
 }
 
@@ -36,6 +38,7 @@
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
     static NSString *CelulaProdutoCache = @"CelulaLoteIDCache";
     UITableViewCell *celula = [self.tabelaQtdeProd dequeueReusableCellWithIdentifier:CelulaProdutoCache];
     
@@ -73,6 +76,23 @@
 
 - (void)dealloc {
     [_tabelaQtdeProd release];
+    [_nomeDolOte release];
     [super dealloc];
+}
+- (IBAction)pronto:(id)sender {
+    for(UITableViewCell *cell in self.tabelaQtdeProd.visibleCells){
+        NSIndexPath *path = [(UITableView *)cell.superview indexPathForCell:cell];
+        
+        UITextField *text = (UITextField *)[cell viewWithTag:path.row+1];
+        
+        Produto *p = [lote.produtos objectAtIndex:path.row];
+        p.quantidade = [NSNumber numberWithInt:[text.text intValue]];
+    }
+    
+    ResultadoViewController *res = (ResultadoViewController *)[self.storyboard instantiateViewControllerWithIdentifier:@"Resultado"];
+    
+    res.lote = lote;
+    [self presentViewController:res animated:YES completion:nil];
+                                                               
 }
 @end
