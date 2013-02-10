@@ -75,6 +75,15 @@
     
     return celula;
 }
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    Lote *lote = [lotes objectAtIndex:indexPath.row];
+    
+    InventariarViewController *inv = (InventariarViewController *)[self.storyboard instantiateViewControllerWithIdentifier:@"Inventariar"];
+    inv.lote = lote;
+    
+    [self presentViewController:inv animated:YES completion:nil];
+}
 
 - (void)didReceiveMemoryWarning
 {

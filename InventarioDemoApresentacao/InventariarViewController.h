@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Lote.h"
 
-@interface InventariarViewController : UIViewController
+@interface InventariarViewController : UIViewController<UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate>
 @property (retain, nonatomic) IBOutlet UITableView *tabelaQtdeProd;
 @property (retain,nonatomic) Lote *lote;
 @end

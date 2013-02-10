@@ -30,6 +30,14 @@
 	// Do any additional setup after loading the view.
 }
 
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return lote.produtos.count;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    //carregar tabela produtos
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
